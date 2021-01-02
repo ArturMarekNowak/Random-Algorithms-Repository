@@ -1,4 +1,4 @@
-CFLAGS=-Wall -g
+CFLAGS=-Wall -d
 
 all: clean FizzBuzz
 
