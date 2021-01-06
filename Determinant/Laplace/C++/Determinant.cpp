@@ -1,7 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <math.h>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
+
+using namespace std;
 
 void printArray(int ** arr, int dim)
 {
@@ -9,11 +11,11 @@ void printArray(int ** arr, int dim)
 		
 		for (int j = 0; j < dim; j++) {
 			
-			printf("%d ", arr[i][j]);
-		
+			cout << arr[i][j] << " ";
+
 		}
 		
-		printf("\n");
+		cout << endl;
 	}
 }
 
@@ -72,9 +74,8 @@ int main()
 {
 	srand(time(NULL));
 	int dim = (rand() % 6) + 2;
-	//int dim = 3;
 	
-	printf("%d\n", dim);	
+	cout << dim << endl;	
 	
 	int **arr = (int **)malloc(dim * sizeof(int *));
 
@@ -87,7 +88,7 @@ int main()
 
 	printArray(arr, dim);
 	
-	printf("Determinant of Matrix is: %f", getDeterminant(arr, dim));
+	cout << "Determinant of Matrix is: " <<  getDeterminant(arr, dim);
 	
 	for (int i = 0; i < dim; i++)
 		free(arr[i]);
