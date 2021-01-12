@@ -41,21 +41,28 @@ class PrintForFun
 };
 
 vector<int> sieveOfErathostenes(int N) {
-
-	for(int i = 0; i < N; i++) {
-		result.push_back(1);
-	}
 	
-	for(int i = 2; i < sqrt(N); i++)
-	{
+	vector <int> result(N, 1);
+	
+	for(int i = 2; i < sqrt(N); i++) 
+	{		
 		if(result[i] == 1) 
 		{
-			for(int j = 2*i; j < N; j += i)
-			{
-				result.at(j) = 0;
+			for(int j = 2*i; j < N; j += i) {
+				result[j] = 0;
 			}
 		}
 	}
+
+	int finalSize = 0;
+	for(int i = 0; i < N; i++)
+	{
+        	if(result[i] != 0) {
+                	result[finalSize++] = i;
+        	}
+	}
+	result.resize(finalSize);
+
 	return result;	
 }
 
