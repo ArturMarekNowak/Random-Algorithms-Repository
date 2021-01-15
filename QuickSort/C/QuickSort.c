@@ -12,20 +12,18 @@ void swap(int * a, int * b)
 
 int partition(int arr[], int first, int last)
 {
-	int pivot = arr[last];
+	int j = first;
 	
-	int here = first;
-	
-	for(int i = first; i < last - 1; i++)
+	for(int i = first; i < last; i++)
 	{
-		if(arr[i] < pivot)
+		if(arr[i] <= arr[last])
 		{
-			swap(&arr[i], &arr[here]);
-			here++;
+			swap(&arr[i], &arr[j]);
+			j++;
 		}
 	}	
-	swap(&arr[here], &arr[last]);
-	return here;
+	swap(&arr[j], &arr[last]);
+	return j;
 }
 
 void quickSort(int arr[], int first, int last)
@@ -62,10 +60,17 @@ int main()
 	quickSort(arrayTwo, 0, sizeof(arrayTwo)/sizeof(arrayTwo[0]) - 1);
 	quickSort(arrayThree, 0, sizeof(arrayThree)/sizeof(arrayThree[0]) - 1);
 	//quickSort(arrayFour, 0, dim - 1);
-	
-	printArray(arrayOne, sizeof(arrayOne)/sizeof(arrayOne[0]) - 1);
-	printArray(arrayTwo, sizeof(arrayTwo)/sizeof(arrayTwo[0]) - 1);
-	printArray(arrayThree, sizeof(arrayThree)/sizeof(arrayThree[0]) - 1);
+
+	/*	
+	for(int i = 0; i < 11; i++)
+        {
+                printf("A[%d] = %d\n", i, arrayOne[i]);
+        }
+	*/
+
+	printArray(arrayOne, sizeof(arrayOne)/sizeof(arrayOne[0]));
+	printArray(arrayTwo, sizeof(arrayTwo)/sizeof(arrayTwo[0]));
+	printArray(arrayThree, sizeof(arrayThree)/sizeof(arrayThree[0]));
 
 	//free(arrayFour);
 
