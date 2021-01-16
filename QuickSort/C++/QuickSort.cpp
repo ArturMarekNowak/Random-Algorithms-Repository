@@ -1,12 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <cstdlib>
 
-void swap(int * a, int * b)
+using namespace std;
+
+void swap(int & a, int & b)
 {
 	 
-	int temp = *a;
-	*a = *b;
-	*b = temp;
+	int temp = a;
+	a = b;
+	b = temp;
 }
 
 int partition(int arr[], int first, int last)
@@ -17,11 +19,11 @@ int partition(int arr[], int first, int last)
 	{
 		if(arr[i] <= arr[last])
 		{
-			swap(&arr[i], &arr[j]);
+			swap(arr[i], arr[j]);
 			j++;
 		}
 	}	
-	swap(&arr[j], &arr[last]);
+	swap(arr[j], arr[last]);
 	return j;
 }
 
@@ -39,9 +41,9 @@ void printArray(int arr[], int dim)
 {
 	for(int i = 0; i < dim; i++)
 	{
-		printf("A[%d] = %d\n", i, arr[i]);
+		cout << "A[" << i << "] = " << arr[i] << endl;
 	}
-	printf("\n");
+	cout << endl;
 }
 
 int main()
