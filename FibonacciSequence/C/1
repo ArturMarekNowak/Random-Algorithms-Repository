@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void fibonacciSequence(int N)
+{
+	int previous = 1, previousPrevious = 1, answer = 0;
+	puts("1 1 ");
+	for(int i = 0; i < N; i++)
+	{
+		answer = answer + previous;
+		printf("%d ", answer);
+		previousPrevious = previous;
+		previous = answer;
+	}
+}
+
+int main()
+{
+	fibonacciSequence(100);
+
+	return 0;
+}
