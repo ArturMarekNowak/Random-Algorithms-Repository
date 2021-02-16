@@ -14,7 +14,7 @@ def function(tup, x):
     
     for i in range(len(tup)):
         result += tup[i] * math.pow(x, len(tup) - 1 - i)
- 
+    
     return result 
 
 def riemannIntegral(a, b, n, tup):
@@ -27,7 +27,7 @@ def riemannIntegral(a, b, n, tup):
         #P += d * abs(function(tup, x))
         P += d * function(tup, x)
         k += 1
-
+    
     return P
 
 tupOne = (1, 0, 0)
