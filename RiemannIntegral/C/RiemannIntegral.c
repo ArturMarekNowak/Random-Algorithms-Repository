@@ -11,12 +11,12 @@ double polynomial(double coeff[], double x, int size)
 	return result;
 }
 
-double riemannIntegral(double a, double b, double n, double coeff[], int size)
+double riemannIntegral(double a, double b, double * n, double coeff[], int size)
 {
-	double d = (b - a) / n, P = 0.0, x = 0.0;
+	double d = (b - a) / *n, P = 0.0, x = 0.0;
 	int k = 0;
 
-	while(k != n)
+	while(k != *n)
 	{
 		x = a + d * k + d / 2.0;
 	      	P += d * polynomial(coeff, x, size);
@@ -33,7 +33,7 @@ int main()
 	
 	for(double i = 2.0; i < 100.0; i++)
 	{
-		printf("f1: %.10f, \t\t f2: %.10f\n", riemannIntegral(1, 3, i, arrOne, sizeof(arrOne)/sizeof(arrOne[0])), riemannIntegral(1, 3, i, arrTwo, sizeof(arrTwo)/sizeof(arrTwo[0])));
+		printf("f1: %.10f, \t\t f2: %.10f\n", riemannIntegral(1, 3, &i, arrOne, sizeof(arrOne)/sizeof(arrOne[0])), riemannIntegral(1, 3, &i, arrTwo, sizeof(arrTwo)/sizeof(arrTwo[0])));
 	}
 	return 0;
 }
