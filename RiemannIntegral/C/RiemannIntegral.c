@@ -11,7 +11,7 @@ double polynomial(double coeff[], double x, int size)
 	return result;
 }
 
-double riemannIntegral(double a, double b, double * n, double coeff[], int size)
+double riemannIntegral(const double a, double b, double * n, double coeff[], int size)
 {
 	double d = (b - a) / *n, P = 0.0, x = 0.0;
 	int k = 0;
