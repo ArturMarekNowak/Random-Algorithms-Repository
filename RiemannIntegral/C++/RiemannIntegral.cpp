@@ -36,7 +36,7 @@ int main()
 	
 	for(double i = 2.0; i < 100.0; i++)
 	{
-		cout << "f1: " << riemannIntegral(1, 3, i, vecOne) << "\tf2: " << riemannIntegral(1, 3, i, vecTwo) << endl;
+		cout << "f1: " << riemannIntegral(1, 3, i, vecOne) << "\tf2: " << riemannIntegral(-10, 13, i, vecTwo) << endl;
 	}
 	return 0;
 }
