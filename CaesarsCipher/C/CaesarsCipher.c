@@ -17,7 +17,7 @@ char * caesarDecipher(char * str, int shift)
 	char * dst = (char*) malloc((strlen(str) + 1) * sizeof(char));
 	
 	if(shift > 26)
-		shift = shift % 26;
+		shift = ((shift % 26) + 26) % 26;
 	
 	while( *p != '\0')
 	{
@@ -42,7 +42,7 @@ char * caesarCipher(char * str, int shift)
 	char * dst = (char*) malloc((strlen(str) + 1) * sizeof(char));
  	
 	if(shift > 26)
-		shift = shift % 26;
+		shift = ((shift % 26) + 26) % 26;
 
 	while( *p != '\0')
 	{
@@ -76,10 +76,20 @@ int main()
 	char * rcDeciphNew = caesarDecipher(rcCiphNew, 35);
 	printf("%s\n", rcDeciphNew);
 
+	puts("");	
+	puts("And another one:");
+	char * rcCiphNewer = caesarCipher(txt, -120);
+	printf("%s\n", rcCiphNewer);
+	char * rcDeciphNewer = caesarDecipher(rcCiphNewer, -120);
+	printf("%s\n", rcDeciphNewer);
+
+
 	free(rcCiph);
 	free(rcDeciph);	
 	free(rcCiphNew);
 	free(rcDeciphNew);
-	
+	free(rcCiphNewer);
+	free(rcDeciphNewer);
+
 	return 0;
 }
