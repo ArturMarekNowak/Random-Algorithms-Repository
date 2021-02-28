@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+long long int recursFactorial(int n)
+{
+	//printf("%ls\n", n);
+	printf("%d\n", n);
+
+	/*
+	if(n == 0)
+		return 1;
+
+	if(n == 1)
+		return 1;
+
+	if(n == 2)
+		return 2;
+	
+	return (long long int) n * recursFactorial(n - 1);
+	*/
+	return 0;	
+}
+
+long long int iteratFactorial(int * n)
+{
+	return 0;
+}
+
+long long int gosperFactorial(int * n)
+{
+	return 0;
+}
+
+int main(int argc, char** argv)
+{
+	if(argc != 4) {
+		fprintf(stderr, "usage %s <Integer Number> <Integer Number> <Integer Number>", argv[0]);
+		return 1;
+	}
+	
+	printf("%lld\n", recursFactorial(atoi(argv[1])));
+	printf("%lld\n", iteratFactorial(atoi(argv[1])));
+	printf("%lld\n", gosperFactorial(atoi(argv[1])));
+	/*
+	puts("");
+	printf("%lld\n", recursFactorial((int*) argv[2]));
+	printf("%lld\n", iteratFactorial((int*) argv[2]));
+	printf("%lld\n", gosperFactorial((int*) argv[2]));
+	puts("");
+	printf("%lld\n", recursFactorial((int*) argv[3]));
+	printf("%lld\n", iteratFactorial((int*) argv[3]));
+	printf("%lld\n", gosperFactorial((int*) argv[3]));
+	puts("");
+	*/
+
+
+
+	return 0;
+}
