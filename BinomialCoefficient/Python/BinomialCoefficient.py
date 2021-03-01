@@ -29,4 +29,7 @@ def binomialCoefficient(listOfCoefficients):
     
 
 listOne = [7, 2]
+listTwo = [40, 20]
+
 print(binomialCoefficient(listOne))
+print(binomialCoefficient(listTwo))
