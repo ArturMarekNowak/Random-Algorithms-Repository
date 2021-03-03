@@ -12,7 +12,7 @@ namespace BisectionMethod
 		public static double function(List<double> coeffs, double x)
 		{
 			double result = 0.0;
-			double size = coeffs.Count();
+			double size = coeffs.Count;
 
 			for(int i = 0; i < size; i++)
 				result += coeffs[i] * Math.Pow(x, size - i - 1);
