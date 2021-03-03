@@ -26,16 +26,12 @@ namespace QuickSort
 					retList.Add(someList[i]);
 				else
 					retList.Insert(0, someList[i]);
-			
-			//Console.WriteLine($"xD: {pivot} xDD: {retList.IndexOf(pivot)}", pivot, retList.IndexOf(pivot));	
-			List<int> firstHalf = QuickSort(retList.GetRange(0, retList.IndexOf(pivot)));
-			//printList(firstHalf);
-			List<int> secondHalf = QuickSort(retList.GetRange(retList.IndexOf(pivot) + 1, retList.Count - retList.IndexOf(pivot) - 1));
+			int indexOfPivot = retList.IndexOf(pivot);	
+			List<int> firstHalf = QuickSort(retList.GetRange(0, indexOfPivot));
+			List<int> secondHalf = QuickSort(retList.GetRange(indexOfPivot + 1, retList.Count - indexOfPivot - 1));
 			secondHalf.Insert(0, pivot);
-			//printList(secondHalf);
 			
 			return firstHalf.Concat(secondHalf).ToList();
-			//return secondHalf;
 		}
 
 		public static void printList(List<int> anotherList)
