@@ -5,20 +5,17 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Features](#features)
 * [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
 
 ## General info
 All algorithms are developed in C, C++, C# and Python with some Makefile when necessery. Each catlog has four subdirectories, one for each language.
 
 ## Technologies
 * Vim 
-* C compiler: cc
-* C++ compiler: g++
-* C#: mcs
-* Python: python 3.8.5
+* C compiler: cc 9.3.0
+* C++ compiler: g++ 9.3.0
+* C# compiler: mcs 6.8.0.105
+* Python interpreter: python 3.8.5
 
 
 ## Setup
