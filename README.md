@@ -1,5 +1,5 @@
 # Project Name
-> This repository contains a number of algorithms I have decided to implement.
+> This repository contains a number of algorithms I have decided to implement. 
 
 ## Table of contents
 * [General info](#general-info)
