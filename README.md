@@ -1,4 +1,4 @@
-# Project Name
+# Random Algorithms Repository
 > This repository contains a number of algorithms I have decided to implement. 
 
 ## Table of contents
