@@ -13,7 +13,7 @@ def knapsackProblem(someListOfLists, index, capacity):
         return result
                                     
 
-listOfListsOne = [[1, 5], [2, 3], [4, 3], [2, 3], [5, 2]]
+listOfListsOne = [[1, 5], [2, 3], [4, 5], [2, 3], [5, 2]]
 listOfListsTwo = [[10, 60], [20, 100], [30, 120]]
 print(knapsackProblem(listOfListsOne, len(listOfListsOne) - 1, 10))
 print(knapsackProblem(listOfListsTwo, len(listOfListsTwo) - 1, 50))
