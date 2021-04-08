@@ -1,18 +1,18 @@
 #include <iostream>
 #include <algorithm>
-#include <string>
+#include <vector>
 
-int distinct(std::string someString)
+int distinct(std::vector <int> someVec)
 {
-	if(someString.size() == 0)
+	if(someVec.size() == 0)
 		return 0;
 
-	sort(someString.begin(), someString.end());
+	sort(someVec.begin(), someVec.end());
 	int previous = 0, result = 1;
-	for(int i = 1; i < someString.size(); i++)
+	for(int i = 1; i < someVec.size(); i++)
 	{
-		previous = someString[i - 1];
-		if(previous != someString[i])
+		previous = someVec[i - 1];
+		if(previous != someVec[i])
 			result++;
 	}
 	return result;
@@ -20,9 +20,9 @@ int distinct(std::string someString)
 
 int main()
 {
-	std::string stringOne = {2, 1, 1, 2, 3, 1};
+	std::vector <int> vecOne = {2, 1, 1, 2, 3, 1};
 
-	std::cout << distinct(stringOne) << std::endl;
+	std::cout << distinct(vecOne) << std::endl;
 
 	return 0;
 }
