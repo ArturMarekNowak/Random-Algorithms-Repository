@@ -8,11 +8,10 @@ int distinct(std::vector <int> someVec)
 		return 0;
 
 	sort(someVec.begin(), someVec.end());
-	int previous = 0, result = 1;
+	int result = 1;
 	for(int i = 1; i < someVec.size(); i++)
 	{
-		previous = someVec[i - 1];
-		if(previous != someVec[i])
+		if(someVec[i - 1] != someVec[i])
 			result++;
 	}
 	return result;

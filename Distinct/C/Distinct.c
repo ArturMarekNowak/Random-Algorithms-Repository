@@ -20,11 +20,10 @@ int Distinct(int someArray[], int N) {
 
     qsort(someArray, N, sizeof(int), myCompare);
 
-    int previous = 0, result = 1;
+    int result = 1;
     for(int i = 1; i < N; i++)
     {
-        previous = someArray[i - 1];
-        if(previous != someArray[i])
+        if(someArray[i - 1] != someArray[i])
             result += 1;
     }
     return result;

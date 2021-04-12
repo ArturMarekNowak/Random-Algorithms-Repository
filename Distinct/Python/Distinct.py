@@ -3,11 +3,9 @@ def distinct(someList):
         return 0
 
     someList = sorted(someList)
-    previous = 0
     result = 1
     for i in range(1, len(someList)):
-        previous = someList[i - 1]
-        if(previous != someList[i]):
+        if(someList[i - 1] != someList[i]):
             result += 1
 
     return result
