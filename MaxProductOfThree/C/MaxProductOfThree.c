@@ -3,36 +3,29 @@
 
 int myCompare(const void * a, const void * b)
 {
-	int _a = *(int*)a;
-	int _b = *(int*)b;
-	if(a < b) return -1;
-	else if (_a == _b) return 0;
-	else return 1;
+	int _a = * ((int * ) a);
+	int _b = * ((int * ) b);
+	if(_a == _b) return 0;
+	else if (_a < _b) return 1;
+	else return -1;
 }
 
 int Max(int a, int b)
 {
-	return (a > b) ? : a, b;
+	return (a > b) ? a : b;
 }
 
-int MaxProductOfThree(int *  arr, int length)
+int MaxProductOfThree(int someArray[], int N)
 {
-	for(int i=0; i<length; ++i)
-        	printf("%d\n", arr[i]);
-
-
-	qsort(arr, length, length *  sizeof(int), myCompare);
+	qsort(someArray, N, sizeof(int), myCompare);
 	
-	for(int i=0; i<length; ++i)
-        	printf("%d\n", arr[i];
-
-	return Max(arr[0] * arr[1] * arr[2], arr[0] * arr[length - 2] * arr[length - 1]);
+	return Max(someArray[0] * someArray[1] * someArray[2], someArray[0] * someArray[N - 2] * someArray[N - 1]);
 }
 
 int main()
 {
 	int arrOne[] = {-3, 1, 2, -2, 5, 6};
-
+	
 	printf("%d\n", MaxProductOfThree(arrOne, sizeof(arrOne)/sizeof(arrOne[0])));
 
 	return 0;

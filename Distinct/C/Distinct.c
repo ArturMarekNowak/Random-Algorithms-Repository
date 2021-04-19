@@ -20,6 +20,9 @@ int Distinct(int someArray[], int N) {
 
     qsort(someArray, N, sizeof(int), myCompare);
 
+    for(int j = 0; j < N; ++j)
+	    printf("%d\n", someArray[j]);
+
     int result = 1;
     for(int i = 1; i < N; i++)
     {
