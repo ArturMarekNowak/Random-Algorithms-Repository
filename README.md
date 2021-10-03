@@ -16,7 +16,7 @@ All algorithms are developed in C, C++, C# and Python with some Makefile when ne
 * C++ compiler: g++ 9.3.0
 * C# compiler: mcs 6.8.0.105
 * Python interpreter: python 3.8.5
-
+* Haskell compiler: ghci 8.6.5
 
 ## Setup
 Provided you have previously mentioned compilers all you need to enter desired folder and make or run proper compiler/interpreter.
